@@ -1,6 +1,5 @@
 console.log('Hello World');
 
-// Create 10 variables about yourself
 let JulesGeurs = {
   firstName: "Jules",
   lastname: "Geurs",
@@ -10,7 +9,6 @@ let JulesGeurs = {
   male: true,
   female: false,
 }
-
 let MeganSpence = {
   firstname: "Megan",
   lastname: "Spence",
@@ -21,13 +19,11 @@ let MeganSpence = {
   female: true,
 }
 
-//printing out entire object
-console.log(JulesGeurs);
-console.log(MeganSpence);
+// Your code goes here, swap first names
+let memory = JulesGeurs.firstName;
+JulesGeurs.firstName = MeganSpence.firstName;
+MeganSpence.firstName = memory;
 
 //print first names only
 console.log(JulesGeurs.firstname);
 console.log(MeganSpence.firstname);
-
-
-// Print these out to console
