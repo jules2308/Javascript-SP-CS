@@ -30,4 +30,5 @@ console.log(JulesGeurs.firstname);
 console.log(MeganSpence.firstname);
 
 
-// Print these out to console
+// Print variables to console
+//console.log("Am I male?" + male);
