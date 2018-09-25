@@ -1,8 +1,5 @@
 console.log('Hello World');
 
-console.log(''); //Prints 2 spaces in the Conosle so output is easier to read
-console.log('');
-
 // Create 10 variables about yourself
 let firstName = "Mark";
 let lastName = "Mercer";
@@ -12,7 +9,7 @@ let hair = "none"; // explore: undefined, null; origonally "none"
 // debug with typeof
 let male = true;
 let female = false;
-let other = false;
+let other = false
 
 // Print variables to console
 console.log(firstName);
