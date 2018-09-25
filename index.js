@@ -4,10 +4,10 @@ console.log(''); //Prints 2 spaces in the Conosle so output is easier to read
 console.log('');
 
 // Create 10 variables about yourself
-let firstName = "Mark";
-let lastName = "Mercer";
-let age = 9; //Not my real age :)
-const favoriteNumber = 13; //security feature
+let firstName = "Jules";
+let lastName = "Geurs";
+let age = 17; //Not my real age :)
+const favoriteNumber = 7; //security feature
 let hair = "none"; // explore: undefined, null; origonally "none"
 // debug with typeof
 let male = true;

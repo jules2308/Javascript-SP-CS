@@ -2,8 +2,8 @@ console.log('Swapping Variables within Objects');
 
 // Two Example Objects using the same variable names as the Primitive Declarations
 let MarkMercer = {
-  firstName: "Mark",
-  lastName: "Mercer",
+  firstName: "Jules",
+  lastName: "Geurs",
 }
 
 let MeganSpence = {
@@ -15,5 +15,5 @@ let MeganSpence = {
 
 
 // Print first names only
-console.log("Mark's first name is: " + MarkMercer.firstName); //Should Return Megan
+console.log("Jules's first name is: " + JulesGeurs.firstName); //Should Return Megan
 console.log("Megan's first name is: " + MeganSpence.firstName); //SHould Return Mark
