@@ -8,11 +8,11 @@ function simpleoperators (numberA, numberB){
   console.log(multiply);
   console.log(divide);
 }
-//Skipcount by ____ for ____ times starting at ____
+//"Skipcount by ____ for ____ times starting at ____"
 function skipcounting (skipcount, times, startingnumber){
   let number = startingnumber - skipcount;
   for (let i=1; i<=times; i++){
-    number += skipcount;
+    number -= skipcount;
     console.log (number);
   }
 }
@@ -20,3 +20,4 @@ let number = [4, 7, 13, 99];
 simpleoperators (number[0], number[1]);
 simpleoperators (number[2], number[3]);
 skipcounting (3, 6, 113);
+skipcounting (8, 11, -351)
