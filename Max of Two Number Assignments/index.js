@@ -1,9 +1,13 @@
-let number = [5, 7];
-Simpleoperators (number[0], number[1]);
-let big = number[0] || number[1]
-simpleOperators (big[0] || big[1]);
+function max (number1, number2) { //Notice these parameters are local and do not mix with "number" variable
+  if (number1 > number2) return number1;
+  else if (number1 < number2) return number2;
+  else square = true;
+  console.log("The function didn't run properly"); //Function written to return a number. This is a debugging line
+}
 
-If (number[0] > number[1]) number[0] = big;
-Elseif (number[0] < number[1]) number[1] = big;
-else console.log (number[0] = number[1]) "The numbers are the same";
-console.log ("The biggest is", big);
+let square = false;
+
+ // Must input numbers here
+let number = max (1, 20);
+if (square == true) console.log("The numbers are the same.");
+else console.log("The larger number is", number);

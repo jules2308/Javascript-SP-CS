@@ -1,62 +1,8 @@
-<<<<<<< HEAD
-//function simpleOperators (numberA, numberB){
-  let adding = numberA + numberB;
-  let subtract = numberA - numberB;
-  let mutliply = numberA * numberB;
-  let divide = numberA / numberB;
-  console.log(adding);
-=======
-let number = [90, 30, 89, 2];
-let skipcount = number[3]
-
-
-function skipCounting (skipCount, times, startingNumber){
-  let number = startingNumber - skipCount;
- for (let i=0; i<=times; i++){
-    number -= skipCount;
-    console.log(number);
-  }
-}
-function odd (even, odd){
-let startingNumber = number[0];
+let number = [1, 20]; //Boundary Numbers
+let skipCount = 1 ; //Number of skipCounting between each element of the sequence, used in FOR Loop
+let difference = number[1] - number[0]; //Difference, mandatory expectation
+let startingNumber = number[0]; //Hint: used in the FOR Loop
 for (let i=0; i<=difference; i++){
-even = (startingNumber += skipcount) % 2;
-  console.log("This number is ", even, "; This iteration is number", i+skipCount);
+  even = (startingNumber += skipCount) % 2;
+  console.log("This number is", even, "; This iteration is number", i+skipCount); //Example of Concatenating
 }
-}
-
-function simpleOperators (number[0], number[1]){
-  let subtract = number[0] - number[1];
->>>>>>> 5c14493fe0de06bd0b1298e4872062164aaec9cb
-  console.log(subtract);
-}
-
-
-//////////
-
-skipCounting (2, 20, 90)
-
-
-
-
-
-//let number = [7, 8];
-//let example = [15, 19];
-//simpleOperators (number[0], number[1]);
-//simpleOperators (example[0], example[1]);
-
-
-/////////////////
-
-//function simpleOperators (numberA, numberB){
-//  let subtract = numberA - numberB;
-//  console.log(subtract);
-//}
-
-//function skipCounting (skipCount, times, startingNumber){
-//  let number = startingNumber - skipCount;
-//  for (let i=1; i<=times; i++){
-//    number -= skipCount;
-//    console.log(number);
-//  }
-//}
