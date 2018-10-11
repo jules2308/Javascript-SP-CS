@@ -1,23 +1,6 @@
-let hour = 10; //Change this simulating automatically reading time from Internet Clock or System Tray Clock
+let hour = 1; //Variable is in hours only
 
-function time (Hour) {
-if (hour < 12) console.log('Good Morning');
-else if (hour) console.log('Good Afternoon');
-else if (hour) console.console.log('Good Afternoon');
-else console.console.log();
-}
-
-
-function max (number1, number2) { //Notice these parameters are local and do not mix with "number" variable
-  if (number1 > number2) return number1;
-  else if (number1 < number2) return number2;
-  else square = true;
-  console.log("The function didn't run properly"); //Function written to return a number. This is a debugging line
-}
-
-let square = false;
-
- // Must input numbers here
-let number = max (, );
-if (square == true) console.log("The numbers are the same.");
-else console.log("The larger number is", number);
+if (hour >= 6 && hour < 12) console.log('Good Morning');
+else if (hour >= 12 && hour < 18) console.log('Good Afternoon');
+else if (hour >= 18 && hour < 24 || 0) console.log('Good Evening');
+else (hour >= 0 && hour < 6) console.log('Good Evening');
