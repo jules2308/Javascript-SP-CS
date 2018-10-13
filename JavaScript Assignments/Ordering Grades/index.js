@@ -7,6 +7,7 @@ console.log ("My letter grade is", calculatedGrade (average), "because my numeri
 
 //This function uses another function, call Single Concern Function (able to use either function for various purposes)
 function calculatedGrade (marks) {
+  const average = calculateAverage (marks);
   if (average >= 90) return 'A'; //Add appropriate grade or feedback
   if (average < 90) return 'B'; //Add approriate conditional
   if (average < 80) return 'C';
