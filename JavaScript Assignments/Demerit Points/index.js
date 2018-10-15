@@ -1,4 +1,4 @@
-checkSpeed (130); //add value here
+checkSpeed (71); //add value here
 
 function checkSpeed (speed) {
   const speedLimit = 70 ; //add value here, remember to initialize with constant not let for security purposes
