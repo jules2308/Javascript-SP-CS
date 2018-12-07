@@ -1,5 +1,5 @@
 PFont levelFont, xoFont, playerFont, scoreFont;
-String easy = "Easy", medium = "Medium", master = "Master", reset = "Reset", title = "Tik Tac Toe", x = "X", o = "O", colom = ":", quit = "Quit";
+String easy = "Easy", medium = "Medium", master = "Master", reset = "Reset", x = "X", o = "O", colom = ":", quit = "Quit";
 int xWin = 0, oWin = 0, count = 0, position = 0;
 Boolean[] noDraw = new Boolean[9]; //Turn off ablity to draw an X or an O in a sqaure of the board
 color green = #00FF1F;
@@ -19,24 +19,21 @@ void textSetup() {
   playerFont = createFont ("SimSun", 90);
   scoreFont = createFont ("Stencil", 90);
 
-  //Tik Tac Toe
-  autoText(title, levelFont, height, #FFFFFF , CENTER, CENTER, width*1/3, height*0/12, width*1/3, height*1/12);
-
   //EASY, MEDIUM, MASTER Strings
-  autoText(easy, levelFont, height, #FFFFFF, CENTER, CENTER, 0, 0, width*3/3, height*2/32);
-  autoText(medium, levelFont, height, #FFFFFF, CENTER, CENTER, 0, 0, width*3/3, height*11/48);
-  autoText(master, levelFont, height, #FFFFFF, CENTER, CENTER, 0, 0, width*3/3, height*19/48);
-  autoText(colom, levelFont, height, #FFFFFF, CENTER, CENTER, 0, 0, width*5/3, height*10/48);
-  autoText(colom, levelFont, height, #FFFFFF, CENTER, CENTER, 0, 0, width*1/3, height*10/48);
+  autoText(easy, levelFont, height, #FFFFFF, CENTER, CENTER, 0, 0, width*1/3, height*8/32);
+  autoText(medium, levelFont, height, #FFFFFF, CENTER, CENTER, 0, 0, width*1, height*10/32);
+  autoText(master, levelFont, height, #FFFFFF, CENTER, CENTER, 0, 0, width*5/3, height*6/32);
+  autoText(colom, levelFont, height, #FFFFFF, CENTER, CENTER, 0, 0, width*5/3, height*28/48);
+  autoText(colom, levelFont, height, #FFFFFF, CENTER, CENTER, 0, 0, width*1/3, height*28/48);
   autoText(quit, levelFont, height, #FFFFFF, CENTER, CENTER, width*0/12, height*0/12, width*1/12, height*1/12);
  
 
   //RESET
-  autoText(reset, levelFont, height, 0, CENTER, CENTER, width*2/3, height*0/12, width*1/3, height*1/12);
+ // autoText(reset, levelFont, height, 0, CENTER, CENTER, width*2/3, height*0/12, width*1/3, height*1/12);
 
   //X&O in Scoreboard
-  autoText(x, playerFont, height, 0, LEFT, CENTER, width*9/24, height*3/24, width*4/48, height*2/24);
-  autoText(o, playerFont, height, 0, LEFT, CENTER, width*17/24, height*3/24, width*4/48, height*2/24);
+  autoText(x, playerFont, height, 0, LEFT, CENTER, width*13/192, height*11/44, width*8/48, height*2/24);
+  autoText(o, playerFont, height, 0, LEFT, CENTER, width*141/192, height*11/44, width*8/48, height*2/24);
 
 }
 
@@ -45,8 +42,8 @@ void textDraw() {
   //xWIN and yWin in the ScoreBoard
   //rect(width*11/24, height*3/24, width*8/48, height*2/24); //Player 1 Score
   //rect(width*19/24, height*3/24, width*8/48, height*2/24); //Player 2 Score
-  autoText(str(xWin), scoreFont, height, 0, LEFT, CENTER, width*11/24, height*3/24, width*8/48, height*2/24);
-  autoText(str(oWin), scoreFont, height, 0, LEFT, CENTER, width*19/24, height*3/24, width*8/48, height*2/24);
+  autoText(str(xWin), playerFont, height, 0, LEFT, CENTER, width*10/48, height*11/44, width*8/48, height*2/24);
+  autoText(str(oWin), playerFont, height, 0, LEFT, CENTER, width*42/48, height*11/44, width*8/48, height*2/24);
 
   //X&O in Board
   if (count == 1 || count == 3 || count == 5 || count == 7 || count == 9) {
