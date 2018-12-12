@@ -1,5 +1,5 @@
 PFont levelFont, xoFont, playerFont, scoreFont;
-String easy = "Easy", medium = "Medium", master = "Master", reset = "Reset", x = "X", o = "O", colom = ":", quit = "Quit";
+String easy = "Easy", medium = "Medium", master = "Master", reset = "Reset", x = "X", o = "O", colom = ":", quit = "Quit", title = "Tic Tac Toe";
 int xWin = 0, oWin = 0, count = 0, position = 0;
 Boolean[] noDraw = new Boolean[9]; //Turn off ablity to draw an X or an O in a sqaure of the board
 color green = #00FF1F;
@@ -18,22 +18,25 @@ void textSetup() {
   xoFont = createFont ("Palace Script MT", 90);
   playerFont = createFont ("SimSun", 90);
   scoreFont = createFont ("Stencil", 90);
+  
+  //Title Tic Tac Toe
+  autoText(title, levelFont, height, #FFFFFF, CENTER, CENTER, 0, 0, width*1, height*3/30);  
 
   //EASY, MEDIUM, MASTER Strings
-  autoText(easy, levelFont, height, #FFFFFF, CENTER, CENTER, 0, 0, width*1/3, height*8/32);
-  autoText(medium, levelFont, height, #FFFFFF, CENTER, CENTER, 0, 0, width*1, height*10/32);
-  autoText(master, levelFont, height, #FFFFFF, CENTER, CENTER, 0, 0, width*5/3, height*6/32);
-  autoText(colom, levelFont, height, #FFFFFF, CENTER, CENTER, 0, 0, width*5/3, height*28/48);
-  autoText(colom, levelFont, height, #FFFFFF, CENTER, CENTER, 0, 0, width*1/3, height*28/48);
+  autoText(easy, levelFont, height, #FFFFFF, CENTER, CENTER, 0, height*9/200, width*4/16, height*4/25);
+  autoText(medium, levelFont, height, #FFFFFF, CENTER, CENTER, width*4/16, height*9/200, width*6/16, height*4/25);
+  autoText(master, levelFont, height, #FFFFFF, CENTER, CENTER, width*10/16, height*9/200, width*6/16, height*4/25);
+  autoText(colom, levelFont, height, #FFFFFF, CENTER, CENTER, 0, 0, width*5/3, height*55/100);
+  autoText(colom, levelFont, height, #FFFFFF, CENTER, CENTER, 0, 0, width*1/3, height*55/100);
   autoText(quit, levelFont, height, #FFFFFF, CENTER, CENTER, width*0/12, height*0/12, width*1/12, height*1/12);
  
 
   //RESET
- // autoText(reset, levelFont, height, 0, CENTER, CENTER, width*2/3, height*0/12, width*1/3, height*1/12);
+  autoText(reset, levelFont, height, 0, CENTER, CENTER, width*1/3, height*19/100, width*1/3, height*19/100);
 
   //X&O in Scoreboard
-  autoText(x, playerFont, height, 0, LEFT, CENTER, width*13/192, height*11/44, width*8/48, height*2/24);
-  autoText(o, playerFont, height, 0, LEFT, CENTER, width*141/192, height*11/44, width*8/48, height*2/24);
+  autoText(x, playerFont, height, 0, LEFT, CENTER, width*13/192, height*19/100, width*8/48, height*18/100);
+  autoText(o, playerFont, height, 0, LEFT, CENTER, width*141/192, height*19/100, width*8/48, height*18/100);
 
 }
 
@@ -42,8 +45,8 @@ void textDraw() {
   //xWIN and yWin in the ScoreBoard
   //rect(width*11/24, height*3/24, width*8/48, height*2/24); //Player 1 Score
   //rect(width*19/24, height*3/24, width*8/48, height*2/24); //Player 2 Score
-  autoText(str(xWin), playerFont, height, 0, LEFT, CENTER, width*10/48, height*11/44, width*8/48, height*2/24);
-  autoText(str(oWin), playerFont, height, 0, LEFT, CENTER, width*42/48, height*11/44, width*8/48, height*2/24);
+  autoText(str(xWin), playerFont, height, 0, LEFT, CENTER, width*10/48, height*19/100, width*8/48, height*18/100);
+  autoText(str(oWin), playerFont, height, 0, LEFT, CENTER, width*42/48, height*19/100, width*8/48, height*18/100);
 
   //X&O in Board
   if (count == 1 || count == 3 || count == 5 || count == 7 || count == 9) {
@@ -68,39 +71,39 @@ void xoText(String text, int position) {
   //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
   textFont(xoFont, 80); //Change the number until it fits, largest font size
   if (position == 1) {
-    text(text, width*1/24, height*7/24, width*6/24, height*4/24);
+    text(text, width*1/24, height*41/100, width*6/24, height*4/24);
     boardPiece[0] = text;
   }
   if (position == 2) {
-    text(text, width*9/24, height*7/24, width*6/24, height*4/24);
+    text(text, width*9/24, height*41/100, width*6/24, height*4/24);
     boardPiece[1] = text;
   }
   if (position == 3) {
-    text(text, width*17/24, height*7/24, width*6/24, height*4/24);
+    text(text, width*17/24, height*41/100, width*6/24, height*4/24);
     boardPiece[2] = text;
   }
   if (position == 4) {
-    text(text, width*1/24, height*13/24, width*6/24, height*4/24);
+    text(text, width*1/24, height*61/100, width*6/24, height*4/24);
     boardPiece[3] = text;
   }
   if (position == 5) {
-    text(text, width*9/24, height*13/24, width*6/24, height*4/24);
+    text(text, width*9/24, height*61/100, width*6/24, height*4/24);
     boardPiece[4] = text;
   }
   if (position == 6) {
-    text(text, width*17/24, height*13/24, width*6/24, height*4/24);
+    text(text, width*17/24, height*61/100, width*6/24, height*4/24);
     boardPiece[5] = text;
   }
   if (position == 7) {
-    text(text, width*1/24, height*19/24, width*6/24, height*4/24);
+    text(text, width*1/24, height*81/100, width*6/24, height*4/24);
     boardPiece[6] = text;
   }
   if (position == 8) {
-    text(text, width*9/24, height*19/24, width*6/24, height*4/24);
+    text(text, width*9/24, height*81/100, width*6/24, height*4/24);
     boardPiece[7] = text;
   }
   if (position == 9) {
-    text(text, width*17/24, height*19/24, width*6/24, height*4/24);
+    text(text, width*17/24, height*81/100, width*6/24, height*4/24);
     boardPiece[8] = text;
   }
   fill(255); //Reset to white for rest of the program
